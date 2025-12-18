@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react"
@@ -22,6 +23,7 @@ export default function RootLayout({
                 <main className="relative z-10">
                     {children}
                 </main>
+                <Analytics />
             </body>
         </html>
     );
